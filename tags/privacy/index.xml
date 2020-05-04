@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>privacy on Patrick Niyongabo</title>
-    <link>http://patrickniyongabo.com/tags/privacy/</link>
+    <link>https://patrickniyongabo.com/tags/privacy/</link>
     <description>Recent content in privacy on patrickniyongabo.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Patrick Niyongabo © 2020 | Made Using Vitae Theme for Hugo</copyright>
     <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-    <atom:link href="http://patrickniyongabo.com/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://patrickniyongabo.com/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Rich Content</title>
-      <link>http://patrickniyongabo.com/vitae/posts/rich-content/</link>
+      <link>https://patrickniyongabo.com/vitae/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/vitae/posts/rich-content/</guid>
+      <guid>https://patrickniyongabo.com/vitae/posts/rich-content/</guid>
       <description>
       
       A brief description of Hugo Shortcodes

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Patrick Niyongabo</title>
-    <link>http://patrickniyongabo.com/</link>
+    <link>https://patrickniyongabo.com/</link>
     <description>Recent content on patrickniyongabo.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Patrick Niyongabo © 2020 | Made Using Vitae Theme for Hugo</copyright>
     <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-    <atom:link href="http://patrickniyongabo.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://patrickniyongabo.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating a Website</title>
-      <link>http://patrickniyongabo.com/posts/creating-a-website/</link>
+      <link>https://patrickniyongabo.com/posts/creating-a-website/</link>
       <pubDate>Sun, 03 May 2020 14:47:00 -0700</pubDate>
       
-      <guid>http://patrickniyongabo.com/posts/creating-a-website/</guid>
+      <guid>https://patrickniyongabo.com/posts/creating-a-website/</guid>
       <description>
       
       Guide to creating a static website using Hugo
@@ -25,10 +25,10 @@
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>http://patrickniyongabo.com/vitae/posts/markdown-syntax/</link>
+      <link>https://patrickniyongabo.com/vitae/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/vitae/posts/markdown-syntax/</guid>
+      <guid>https://patrickniyongabo.com/vitae/posts/markdown-syntax/</guid>
       <description>
       
       Sample article showcasing basic Markdown syntax and formatting for HTML elements.
@@ -37,10 +37,10 @@
     </item>
     <item>
       <title>Rich Content</title>
-      <link>http://patrickniyongabo.com/vitae/posts/rich-content/</link>
+      <link>https://patrickniyongabo.com/vitae/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/vitae/posts/rich-content/</guid>
+      <guid>https://patrickniyongabo.com/vitae/posts/rich-content/</guid>
       <description>
       
       A brief description of Hugo Shortcodes
@@ -49,10 +49,10 @@
     </item>
     <item>
       <title>Placeholder Text</title>
-      <link>http://patrickniyongabo.com/posts/placeholder-text/</link>
+      <link>https://patrickniyongabo.com/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/posts/placeholder-text/</guid>
+      <guid>https://patrickniyongabo.com/posts/placeholder-text/</guid>
       <description>
       
       Lorem Ipsum Dolor Si Amet
@@ -61,10 +61,10 @@
     </item>
     <item>
       <title>Math Typesetting</title>
-      <link>http://patrickniyongabo.com/vitae/posts/math-typesetting/</link>
+      <link>https://patrickniyongabo.com/vitae/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/vitae/posts/math-typesetting/</guid>
+      <guid>https://patrickniyongabo.com/vitae/posts/math-typesetting/</guid>
       <description>
       
       A brief guide to setup KaTeX
@@ -73,10 +73,10 @@
     </item>
     <item>
       <title>Emoji Support</title>
-      <link>http://patrickniyongabo.com/vitae/posts/emoji-support/</link>
+      <link>https://patrickniyongabo.com/vitae/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/vitae/posts/emoji-support/</guid>
+      <guid>https://patrickniyongabo.com/vitae/posts/emoji-support/</guid>
       <description>
       
       Guide to emoji usage in Hugo
@@ -85,10 +85,10 @@
     </item>
     <item>
       <title>About Hugo</title>
-      <link>http://patrickniyongabo.com/about/</link>
+      <link>https://patrickniyongabo.com/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/about/</guid>
+      <guid>https://patrickniyongabo.com/about/</guid>
       <description>
       
       Hugo, the world’s fastest framework for building websites

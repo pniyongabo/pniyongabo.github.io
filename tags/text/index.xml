@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>text on Patrick Niyongabo</title>
-    <link>http://patrickniyongabo.com/tags/text/</link>
+    <link>https://patrickniyongabo.com/tags/text/</link>
     <description>Recent content in text on patrickniyongabo.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Patrick Niyongabo © 2020 | Made Using Vitae Theme for Hugo</copyright>
     <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-    <atom:link href="http://patrickniyongabo.com/tags/text/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://patrickniyongabo.com/tags/text/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Placeholder Text</title>
-      <link>http://patrickniyongabo.com/posts/placeholder-text/</link>
+      <link>https://patrickniyongabo.com/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/posts/placeholder-text/</guid>
+      <guid>https://patrickniyongabo.com/posts/placeholder-text/</guid>
       <description>
       
       Lorem Ipsum Dolor Si Amet

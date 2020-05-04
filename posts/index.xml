@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Patrick Niyongabo</title>
-    <link>http://patrickniyongabo.com/posts/</link>
+    <link>https://patrickniyongabo.com/posts/</link>
     <description>Recent content in Posts on patrickniyongabo.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Patrick Niyongabo © 2020 | Made Using Vitae Theme for Hugo</copyright>
     <lastBuildDate>Sun, 03 May 2020 14:47:00 -0700</lastBuildDate>
     
-    <atom:link href="http://patrickniyongabo.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://patrickniyongabo.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating a Website</title>
-      <link>http://patrickniyongabo.com/posts/creating-a-website/</link>
+      <link>https://patrickniyongabo.com/posts/creating-a-website/</link>
       <pubDate>Sun, 03 May 2020 14:47:00 -0700</pubDate>
       
-      <guid>http://patrickniyongabo.com/posts/creating-a-website/</guid>
+      <guid>https://patrickniyongabo.com/posts/creating-a-website/</guid>
       <description>
       
       Guide to creating a static website using Hugo
@@ -25,10 +25,10 @@
     </item>
     <item>
       <title>Placeholder Text</title>
-      <link>http://patrickniyongabo.com/posts/placeholder-text/</link>
+      <link>https://patrickniyongabo.com/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://patrickniyongabo.com/posts/placeholder-text/</guid>
+      <guid>https://patrickniyongabo.com/posts/placeholder-text/</guid>
       <description>
       
       Lorem Ipsum Dolor Si Amet

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://patrickniyongabo.com/about/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://patrickniyongabo.com/posts/creating-a-website/</loc>
     <lastmod>2020-05-03T14:47:00-07:00</lastmod>
   </url>
@@ -115,16 +125,6 @@
   <url>
     <loc>https://patrickniyongabo.com/posts/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://patrickniyongabo.com/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://patrickniyongabo.com/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

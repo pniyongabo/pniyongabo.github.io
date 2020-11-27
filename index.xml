@@ -7,10 +7,22 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2020 | Made Using Vitae Theme for Hugo</copyright>
-		<lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://patrickniyongabo.com/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>A Bit About Me</title>
+			<link>https://patrickniyongabo.com/about/</link>
+			<pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://patrickniyongabo.com/about/</guid>
+			<description>
+				
+				About Patrick Niyongabo
+				
+			</description>
+		</item>
 		<item>
 			<title>Creating a Website</title>
 			<link>https://patrickniyongabo.com/posts/creating-a-website/</link>
@@ -80,18 +92,6 @@
 			<description>
 				
 				Guide to emoji usage in Hugo
-				
-			</description>
-		</item>
-		<item>
-			<title>About Hugo</title>
-			<link>https://patrickniyongabo.com/about/</link>
-			<pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-			
-			<guid>https://patrickniyongabo.com/about/</guid>
-			<description>
-				
-				Hugo, the world’s fastest framework for building websites
 				
 			</description>
 		</item>

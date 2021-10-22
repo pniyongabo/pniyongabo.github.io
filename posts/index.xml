@@ -7,10 +7,22 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2021 | Made Using Vitae Theme for Hugo</copyright>
-		<lastBuildDate>Sun, 03 May 2020 14:47:00 -0700</lastBuildDate>
+		<lastBuildDate>Wed, 20 Oct 2021 15:13:49 -0700</lastBuildDate>
 		
 		<atom:link href="https://patrickniyongabo.com/posts/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>Vertical Scaling vs Horizontal Scaling</title>
+			<link>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</link>
+			<pubDate>Wed, 20 Oct 2021 15:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</guid>
+			<description>
+				
+				Vertical Scaling vs Horizontal Scaling
+				
+			</description>
+		</item>
 		<item>
 			<title>Creating a Website</title>
 			<link>https://patrickniyongabo.com/posts/creating-a-website/</link>
@@ -44,6 +56,18 @@
 			<description>
 				
 				A brief description of Hugo Shortcodes
+				
+			</description>
+		</item>
+		<item>
+			<title>Placeholder Text</title>
+			<link>https://patrickniyongabo.com/posts/placeholder-text/</link>
+			<pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+			
+			<guid>https://patrickniyongabo.com/posts/placeholder-text/</guid>
+			<description>
+				
+				Lorem Ipsum Dolor Si Amet
 				
 			</description>
 		</item>

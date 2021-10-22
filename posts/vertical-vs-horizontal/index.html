@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	
+	<meta name="generator" content="Hugo 0.69.2" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta property="og:title" content="Vertical Scaling vs Horizontal Scaling">
+	
+	
+	<meta name="keywords" content="databases,scaling,distributed systems,vertical scaling,horizontal scaling"><meta name="description" content="Vertical Scaling vs Horizontal Scaling"><meta property="og:title" content="Vertical Scaling vs Horizontal Scaling" />
+<meta property="og:description" content="Vertical Scaling vs Horizontal Scaling" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://patrickniyongabo.com/posts/vertical-vs-horizontal/" />
+<meta property="article:published_time" content="2021-10-20T15:13:49-07:00" />
+<meta property="article:modified_time" content="2021-10-20T15:13:49-07:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vertical Scaling vs Horizontal Scaling"/>
+<meta name="twitter:description" content="Vertical Scaling vs Horizontal Scaling"/>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" />
+	<link rel="stylesheet" href="/css/katex.min.css" crossorigin="anonymous">
+	<script defer src="/js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="/js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><title>Vertical Scaling vs Horizontal Scaling | Patrick Niyongabo</title></head>
+<body><header>
+	
+	<div id="avatar">
+		<a href="https://patrickniyongabo.com/">
+		  <img src="/img/niyongabo.jpg" alt="Patrick Niyongabo">
+		</a>
+	</div>
+	
+	<div id="titletext"><h2 id="title"><a href="https://patrickniyongabo.com/">Patrick Niyongabo</a></h2></div>
+	<div id="title-description"><p id="subtitle">hit-or-miss: my miscellaneous projects and random ideas</p><div id="social">
+			<nav>
+				<ul>
+					<li><a href="https://github.com/pniyongabo/"><i title="Github" class="icons fab fa-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/patrickniyongabo/"><i title="Linkedin" class="icons fab fa-linkedin"></i></a></li>
+					<li><a href="https://www.instagram.com/niyongabo2.0/"><i title="Instagram" class="icons fab fa-instagram"></i></a></li></ul>
+			</nav>
+		</div>
+	</div>
+	
+	<div id="mainmenu">
+		<nav>
+			<ul>
+				
+				<li><a href="/">Home</a></li>
+				
+				<li><a href="/posts">All Posts</a></li>
+				
+				<li><a href="/about">About</a></li>
+				
+				<li><a href="/tags">Tags</a></li>
+				
+				<li><a href="/categories">Categories</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	
+</header>
+<main><div class="post">
+	
+	<div class="author">
+	
+	</div>
+	<div class="post-header">
+	
+		<div class="meta">
+			
+			<div class="date">
+				<span class="day">20</span>
+				<span class="rest">Oct 2021</span>
+			</div>
+			
+		</div>
+		
+		<div class="matter">
+			<h1 class="title">Vertical Scaling vs Horizontal Scaling</h1>
+		</div>
+	</div>
+	<div class="markdown">
+		<p>In the several years that I have been dealing with computer systems, the concept of scaling has kept coming up, escpecially in the last five years when cloud computing went mainstream. Depending on the type of conversation, or the context, <code>scaling</code> has been discussed as either vertical scaling or horizontal scaling - sometimes interchangeably, often leading to confusion on my part. It is mostly my fault though, I should have paid more attention in my CS systems courses.</p>
+<p>I am writing this post because I think I have finally found excellent definitions that explain the difference between <code>vertical scaling</code> and <code>horizontal scaling</code>. Out of all places, I found these eye-opening definitions on the <a href="https://docs.mongodb.com/manual/sharding/">MongoDB manual page on &ldquo;Sharding&rdquo;</a>!</p>
+<p>Below is how they define &lsquo;vertical scaling&rsquo;:</p>
+<blockquote>
+<p><code>Vertical Scaling</code> involves increasing the capacity of a single server, such as using a more powerful CPU, adding more RAM, or increasing the amount of storage space.</p>
+</blockquote>
+<p>And this is their definition of &lsquo;horizontal scaling&rsquo;:</p>
+<blockquote>
+<p><code>Horizontal Scaling</code> involves dividing the system dataset and load over multiple servers, adding additional servers to increase capacity as required.</p>
+</blockquote>
+<p>Based on the succint definitions above, you can see why modern distributed systems (cloud databases and other high-traffic systems) have embraced horizontal scaling. With vertical scaling, there is a limit to how much CPU/memory/storage can be added to a DB/compute instance. Plus, horizontal scaling improves the overall health of the system by providing fault-tolerancy in a case some of the instances crash or in a case of a network issue. An additional advantage of horizontal scaling is that you don&rsquo;t have to use the latest-gen, instead you can build your system on commodity hardware as long as you have some replication mechanisms.</p>
+<p>With all that said, horizontal scaling has its dis-advantages, the main one being that you will need to implement an efficient (sometimes complex) mechanism for up/down scaling and other related processes (creating and maintaing replicas for example).</p>
+
+	</div>
+	
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	<div class="tags">
+		<div class="taxosfloating_left">
+			<p>Tags</p>
+		</div>
+		<div class="termsfloating_right">
+			<p>
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/databases/"> databases </a>
+			
+			
+			
+			
+			
+			<a href="/tags/distributed-systems/"> distributed-systems </a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/horizontal-scaling/"> horizontal-scaling </a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/scaling/"> scaling </a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/vertical-scaling/"> vertical-scaling </a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		</div>
+		<div class="clearit"></div>
+		
+		
+		
+		
+		
+	</div></div>
+
+  </main>
+<footer>
+	 Patrick Niyongabo © 2021 | Made Using <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> Theme for <a href="https://gohugo.io">Hugo</a> 
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-81819868-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	
+</footer>
+
+
+</body>
+</html>

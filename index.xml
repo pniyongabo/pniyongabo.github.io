@@ -12,6 +12,18 @@
 		<atom:link href="https://patrickniyongabo.com/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>Vertical Scaling vs Horizontal Scaling</title>
+			<link>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</link>
+			<pubDate>Wed, 20 Oct 2021 15:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</guid>
+			<description>
+				
+				Vertical Scaling vs Horizontal Scaling
+				
+			</description>
+		</item>
+		<item>
 			<title>A Bit About Me</title>
 			<link>https://patrickniyongabo.com/about/</link>
 			<pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
@@ -56,6 +68,18 @@
 			<description>
 				
 				A brief description of Hugo Shortcodes
+				
+			</description>
+		</item>
+		<item>
+			<title>Placeholder Text</title>
+			<link>https://patrickniyongabo.com/posts/placeholder-text/</link>
+			<pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+			
+			<guid>https://patrickniyongabo.com/posts/placeholder-text/</guid>
+			<description>
+				
+				Lorem Ipsum Dolor Si Amet
 				
 			</description>
 		</item>

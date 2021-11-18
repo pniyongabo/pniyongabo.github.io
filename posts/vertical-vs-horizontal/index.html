@@ -9,15 +9,15 @@
 	<meta property="og:title" content="Vertical Scaling vs Horizontal Scaling">
 	
 	
-	<meta name="keywords" content="databases,scaling,distributed systems,vertical scaling,horizontal scaling"><meta name="description" content="Vertical Scaling vs Horizontal Scaling"><meta property="og:title" content="Vertical Scaling vs Horizontal Scaling" />
-<meta property="og:description" content="Vertical Scaling vs Horizontal Scaling" />
+	<meta name="keywords" content="databases,scaling,distributed systems,vertical scaling,horizontal scaling"><meta name="description" content="Scaling distributed systems"><meta property="og:title" content="Vertical Scaling vs Horizontal Scaling" />
+<meta property="og:description" content="Scaling distributed systems" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://patrickniyongabo.com/posts/vertical-vs-horizontal/" />
 <meta property="article:published_time" content="2021-10-20T15:13:49-07:00" />
 <meta property="article:modified_time" content="2021-10-20T15:13:49-07:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vertical Scaling vs Horizontal Scaling"/>
-<meta name="twitter:description" content="Vertical Scaling vs Horizontal Scaling"/>
+<meta name="twitter:description" content="Scaling distributed systems"/>
 
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
@@ -84,7 +84,7 @@
 		</div>
 	</div>
 	<div class="markdown">
-		<p>In the several years that I have been dealing with computer systems, the concept of scaling has kept coming up, escpecially in the last five years when cloud computing went mainstream. Depending on the type of conversation, or the context, <code>scaling</code> has been discussed as either vertical scaling or horizontal scaling - sometimes interchangeably, often leading to confusion on my part. It is mostly my fault though, I should have paid more attention in my CS systems courses.</p>
+		<p>In the several years that I have been dealing with computer systems, the concept of scaling has kept coming up, especially in the last five years as cloud computing went mainstream. Depending on the type of conversation, or the context, <code>scaling</code> has often meant vertical scaling or horizontal scaling - sometimes interchangeably, often leading to confusion on my part. It is mostly my fault though, I should have paid more attention in my CS systems courses.</p>
 <p>I am writing this post because I think I have finally found excellent definitions that explain the difference between <code>vertical scaling</code> and <code>horizontal scaling</code>. Out of all places, I found these eye-opening definitions on the <a href="https://docs.mongodb.com/manual/sharding/">MongoDB manual page on &ldquo;Sharding&rdquo;</a>!</p>
 <p>Below is how they define &lsquo;vertical scaling&rsquo;:</p>
 <blockquote>
@@ -94,7 +94,7 @@
 <blockquote>
 <p><code>Horizontal Scaling</code> involves dividing the system dataset and load over multiple servers, adding additional servers to increase capacity as required.</p>
 </blockquote>
-<p>Based on the succint definitions above, you can see why modern distributed systems (cloud databases and other high-traffic systems) have embraced horizontal scaling. With vertical scaling, there is a limit to how much CPU/memory/storage can be added to a DB/compute instance. Plus, horizontal scaling improves the overall health of the system by providing fault-tolerancy in a case some of the instances crash or in a case of a network issue. An additional advantage of horizontal scaling is that you don&rsquo;t have to use the latest-gen, instead you can build your system on commodity hardware as long as you have some replication mechanisms.</p>
+<p>Based on these definitions above, you can see why modern distributed systems (cloud databases and other high-traffic systems) have embraced horizontal scaling. With vertical scaling, there is a limit to how much CPU/memory/storage can be added to a DB/compute instance. With horizontal scaling, systems can be built using commodity hardware; you don&rsquo;t have to use the latest-gen infrastructure, instead you can chain multiple cheap server racks together. The added advantage of using this approach is that horizontal scaling improves the overall health of the system by providing fault-tolerancy in a case some of the instances crash or in a case of a network issue.</p>
 <p>With all that said, horizontal scaling has its dis-advantages, the main one being that you will need to implement an efficient (sometimes complex) mechanism for up/down scaling and other related processes (creating and maintaing replicas for example).</p>
 
 	</div>
@@ -160,13 +160,7 @@
 			
 			
 			
-			
-			
 			<a href="/tags/scaling/"> scaling </a>
-			
-			
-			
-			
 			
 			
 			

@@ -19,7 +19,7 @@
 			<guid>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</guid>
 			<description>
 				
-				Vertical Scaling vs Horizontal Scaling
+				Scaling distributed systems
 				
 			</description>
 		</item>
@@ -68,18 +68,6 @@
 			<description>
 				
 				A brief description of Hugo Shortcodes
-				
-			</description>
-		</item>
-		<item>
-			<title>Placeholder Text</title>
-			<link>https://patrickniyongabo.com/posts/placeholder-text/</link>
-			<pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-			
-			<guid>https://patrickniyongabo.com/posts/placeholder-text/</guid>
-			<description>
-				
-				Lorem Ipsum Dolor Si Amet
 				
 			</description>
 		</item>

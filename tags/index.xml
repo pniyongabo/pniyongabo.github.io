@@ -7,10 +7,58 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2021 | Made Using Vitae Theme for Hugo</copyright>
-		<lastBuildDate>Wed, 20 Oct 2021 15:13:49 -0700</lastBuildDate>
+		<lastBuildDate>Thu, 09 Dec 2021 19:13:49 -0700</lastBuildDate>
 		
 		<atom:link href="https://patrickniyongabo.com/tags/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>agile</title>
+			<link>https://patrickniyongabo.com/tags/agile/</link>
+			<pubDate>Thu, 09 Dec 2021 19:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/tags/agile/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>cloud computing</title>
+			<link>https://patrickniyongabo.com/tags/cloud-computing/</link>
+			<pubDate>Thu, 09 Dec 2021 19:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/tags/cloud-computing/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>devops</title>
+			<link>https://patrickniyongabo.com/tags/devops/</link>
+			<pubDate>Thu, 09 Dec 2021 19:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/tags/devops/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>microservices</title>
+			<link>https://patrickniyongabo.com/tags/microservices/</link>
+			<pubDate>Thu, 09 Dec 2021 19:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/tags/microservices/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
 		<item>
 			<title>databases</title>
 			<link>https://patrickniyongabo.com/tags/databases/</link>

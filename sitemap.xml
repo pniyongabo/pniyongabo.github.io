@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://patrickniyongabo.com/tags/agile/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/tags/cloud-computing/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/tags/devops/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/posts/devops-methodology/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/tags/microservices/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/posts/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://patrickniyongabo.com/tags/</loc>
+    <lastmod>2021-12-09T19:13:49-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://patrickniyongabo.com/tags/databases/</loc>
     <lastmod>2021-10-20T15:13:49-07:00</lastmod>
   </url>
@@ -18,17 +53,7 @@
   </url>
   
   <url>
-    <loc>https://patrickniyongabo.com/posts/</loc>
-    <lastmod>2021-10-20T15:13:49-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://patrickniyongabo.com/tags/scaling/</loc>
-    <lastmod>2021-10-20T15:13:49-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://patrickniyongabo.com/tags/</loc>
     <lastmod>2021-10-20T15:13:49-07:00</lastmod>
   </url>
   

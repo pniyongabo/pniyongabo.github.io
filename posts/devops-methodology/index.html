@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	
+	<meta name="generator" content="Hugo 0.69.2" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta property="og:title" content="DevOps Methodology">
+	
+	
+	<meta name="keywords" content="devops,microservices,agile,cloud computing"><meta name="description" content="An Emerging Methodology in Software Engineering"><meta property="og:title" content="DevOps Methodology" />
+<meta property="og:description" content="An Emerging Methodology in Software Engineering" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://patrickniyongabo.com/posts/devops-methodology/" />
+<meta property="article:published_time" content="2021-12-09T19:13:49-07:00" />
+<meta property="article:modified_time" content="2021-12-09T19:13:49-07:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DevOps Methodology"/>
+<meta name="twitter:description" content="An Emerging Methodology in Software Engineering"/>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" />
+	<link rel="stylesheet" href="/css/katex.min.css" crossorigin="anonymous">
+	<script defer src="/js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="/js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><title>DevOps Methodology | Patrick Niyongabo</title></head>
+<body><header>
+	
+	<div id="avatar">
+		<a href="https://patrickniyongabo.com/">
+		  <img src="/img/niyongabo.jpg" alt="Patrick Niyongabo">
+		</a>
+	</div>
+	
+	<div id="titletext"><h2 id="title"><a href="https://patrickniyongabo.com/">Patrick Niyongabo</a></h2></div>
+	<div id="title-description"><p id="subtitle">hit-or-miss: my miscellaneous projects and random ideas</p><div id="social">
+			<nav>
+				<ul>
+					<li><a href="https://github.com/pniyongabo/"><i title="Github" class="icons fab fa-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/patrickniyongabo/"><i title="Linkedin" class="icons fab fa-linkedin"></i></a></li>
+					<li><a href="https://www.instagram.com/niyongabo2.0/"><i title="Instagram" class="icons fab fa-instagram"></i></a></li></ul>
+			</nav>
+		</div>
+	</div>
+	
+	<div id="mainmenu">
+		<nav>
+			<ul>
+				
+				<li><a href="/">Home</a></li>
+				
+				<li><a href="/posts">All Posts</a></li>
+				
+				<li><a href="/about">About</a></li>
+				
+				<li><a href="/tags">Tags</a></li>
+				
+				<li><a href="/categories">Categories</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	
+</header>
+<main><div class="post">
+	
+	<div class="author">
+	
+	</div>
+	<div class="post-header">
+	
+		<div class="meta">
+			
+			<div class="date">
+				<span class="day">09</span>
+				<span class="rest">Dec 2021</span>
+			</div>
+			
+		</div>
+		
+		<div class="matter">
+			<h1 class="title">DevOps Methodology</h1>
+		</div>
+	</div>
+	<div class="markdown">
+		<p>(<strong>Disclaimer</strong>: <em>I wrote this research paper for the <a href="http://web.cecs.pdx.edu/~xie/se-f21/se-f21.htm">CS554 Software Engineering at Portland State University</a>. I spent around 2-3 days working on this, and found some interesting info on the web that I wanted to share. If you find some typos, and paragraphs or sentences that don&rsquo;t make sense, feel free to reach out by email. Writing and publishing on this website is my way of learning about new topics, and I would love to get some feedback from anyone who reads these posts.</em>)</p>
+<p>Software engineering has evolved and scaled up since the modern home computer was developed in the 70s. Commercial software industry developed as a direct response to that increased demand and to support enterprise activities such as admin tools, payroll, and communication platforms inside companies. As tech companies got bigger, complex and scalable software was needed to automate and improve the long process of writing and testing increasingly-complex software, and then deploying to an increasing number of production environments, from embedded sensors to super-computers, and that is how DevOps practices emerged. This paper is an overview of what DevOps is (<a href="#intro">section I</a>), how the rise of DevOps relates to the rise of the microservices architecture (<a href="#microservices">section II</a>), the interesting relationship between DevOps and the Agile methodology (<a href="#agile">section III</a>), the strengths and weaknesses of DevOps (<a href="#strengths">section IV</a>),  the state of the current adoption of DevOps practices (<a href="#adoption">section V</a>), the future trends in DevOps (<a href="#future">section VI</a>), and lastly some concluding remarks (<a href="#conclusion">section VII</a>).</p>
+<h3 id="intro">I. What is DevOps?</h3>
+<p>A portmanteau of two words: development (dev) and operations (ops)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> - DevOps was conceived as a movement to unite the dev teams and ops teams, and respective processes, to align towards the same goals within larger organizations. In the “What is DevOps?” article<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, Microsoft defines DevOps as “the union of people, process, and technology to continually provide value to customers”. Simply put, DevOps was born out of a desire to improve efficiency throughout the software development life cycle. According to Sommerville<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, there are five steps in the waterfall software development life cycle (SDLC) model: (1) gathering the requirements, (2) designing the systems, (3) implementing and testing, (4) integrating and integrating-testing, and (5) operating and maintaining. The DevOps movement mostly focused on improving stages 3-5, and streamlining the inter-stages subprocesses.</p>
+<p>In their 2016 IEEE article<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>, Ebert et al. describe DevOps as an “organizational shift”. According to Google trends, as illustrated in <em>figure 1</em>, this organizational shift started gaining momentum in the early 2010s, the same time when cloud computing and Agile paradigms also went mainstream. This comes as no surprise as the DevOps methodology relies on these cloud tools and several practices that are common in Agile. This relationship is further explored in sections II and III.</p>
+<p>One of the main goals of DevOps is to streamline the process of developing and deploying enterprise software by reducing “the time between committing a system change and placing the change into normal production”<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. That goal is achieved by adopting DevOps practices throughout all the stages of the software development life cycle. According to Liming et al<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, that includes:</p>
+<ul>
+<li>Verifying that the DevOps pipelines work at initialization.</li>
+<li>Designing a system architecture that makes it possible to adopt DevOps practices, mostly in the form of micro-services and small incremental changes.</li>
+<li>Making the system easily configurable pre and post-deployment.</li>
+<li>Implementing a monitoring system, and rollback mechanisms.</li>
+</ul>
+<h3 id="microservices">II. Microservices Architecture and DevOps</h3>
+<p>Among these above-mentioned practices, the most important one is the adoption of DevOps across the tech industry has been the migration of organizations to a micro-services model, and the related organizational shift from waterfall models to agile development. These two shifts embraced the concept of developing, testing, and developing incremental changes that could be easily rolled back, and that wouldn&rsquo;t take down the whole ecosystem if something went wrong. Microservices make it possible for different components and different layers of the tech stack, to interact through defined APIs, with varying responses that the calling (consumer) service can interpret and handle without relying on the serving (producer) service to always be up and running.</p>
+<p>The adoption of micro-services has resulted in the rise in usage of REST (representational state transfer) APIs. REST APIs define protocols of integration between two components: a consumer and a producer<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>. The REST architecture makes it easy for different components within a system to interact with each other, and transfer data from where it is stored (database) or generated (computation engine) to the customer-facing layers (web-apps and internet browsers). As the system grows in size and complexity, the interactions multiply, and they require strict rules to be set in order to define what a consumer service is supposed to send when requesting some information, and what a producer service is supposed to send back as response. In addition to the basic structures of the data being transferred, REST APIs can also define security parameters (tokens, keys, cookies, etc), APIs versions, and other miscellaneous parameters that make those interactions more efficient.</p>
+<p>In modern web systems, most REST APIs are implemented using standard HTTP methods<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> (GET, POST, PUT, DELETE, PATCH, OPTIONS) that define operations on resources that are stored in particular locations called “uniform resource identifiers” (URIs).  In addition to the HTTP methods, the HTTP protocol also defines “HTTP response status codes”<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> that describe whether a certain request was successful or not. These response codes are split into five main categories. Those categories are listed below with examples of the most common codes:</p>
+<ol>
+<li>
+<p>Informational responses (100–199): 100 Continue, 101 Switching Protocols, 102 Processing, 103 Early Hints</p>
+</li>
+<li>
+<p>Successful responses (200–299): 200 OK, 201 Created, 202 Accepted, 203 Non-Authoritative Information, 204 No Content, 206 Partial Content</p>
+</li>
+<li>
+<p>Redirection messages (300–399): 300 Multiple Choice, 301 Moved Permanently, 302 Found, 303 See Other, 304 Not Modified</p>
+</li>
+<li>
+<p>Client error responses (400–499): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed, 409 Conflict</p>
+</li>
+<li>
+<p>Server error responses (500–599): 500 Internal Server Error, 501 Not Implemented, 502 Bad Gateway, 503 Service Unavailable, 504 Gateway Timeout, 505 HTTP Version Not Supported</p>
+<p>Each category can be received and handled by the calling service by either consuming the received data if the call was successful, making another call if the resource has moved or there was some ambiguity in the previous request, or fixing the request if the previous request failed because of the client error, and handling the error in a pre-defined manner of there is a server error.</p>
+</li>
+</ol>
+<h3 id="agile">III. Agile Methodology and DevOps</h3>
+<p>While the Agile methodology tends to focus on flexibility and Devops “emphasizes on continuous integration”<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>, the two methodologies share a lot of similarities. These similarities include the focus on getting the product to the customer as fast as possible, and getting some feedback before incrementing and adding more features. This is achieved by improving all the stages in the software development life cycle from planning to maintenance, and the increased use of automation and communication tools to streamline processes. Whether it is a project-management tool like JIRA or a teams communication platform like Slack, DevOps teams tend to develop integrations for those tools (alerting, deployment updates, pull requests statues, etc) that make it easier for the developing teams to follow the proper guidelines of the Agile process.</p>
+<p>Ebert at al. classify DevOps tools into six categories<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>, category 2 and 3 are sometimes classified as CICD (continuous integration, and continuous deployment):</p>
+<ol>
+<li>Build tools</li>
+<li>Continuous-integration tools</li>
+<li>Deployment tools</li>
+<li>Logging tools</li>
+<li>Operations tools</li>
+<li>Monitoring tools</li>
+</ol>
+<p>To take an example, let’s say a build fails some integration tests during the deployment pipeline. DevOps tools would automatically cancel the build, (and rollback to the previous successful build), and then the next step would be to notify developers by either sending an email, or a message to the slack channel of the team that own the microservice that was getting deployed; another common integration is to mark the associated JIRA ticket as ‘requiring attention’ so that it can be moved back to the development or testing stage, and if necessary, so that follow-up tickets can created.</p>
+<p>Another aspect of DevOps that helps in the adoption of the Agile methodology is the collection of metrics and other data points that make it easy for developer teams and managements to evaluate previous development cycles and make data-backed decisions on how to improve existing processes or whether to adopt new ones. These metrics are collected using version control tools like git or aggregated using log collections tools like Splunk, and later visualized in customizable dashboards. These dashboards are crucial as they can easily be interpreted by non-software teams and management or non-technical members of the development teams.  This makes it easy for organizations to communicate using data metrics as conversation starters, and making sure that everyone is aware of current trends (percentage of errors, code unit-test coverage metrics, alerts and deployment failure rates, etc) across all software components at any given time.</p>
+<p>The transparency and visibility of Agile is inherently supported by the DevOps processes, and it is one of the main things that attract Agile teams and organizations to switch to the DevOps model. In the next section, the strengths and weaknesses of DevOps are discussed in more detail.</p>
+<h3 id="strengths">IV. Strengths and Weaknesses of DevOps</h3>
+<p>Throughout the last decade, DevOps has supercharged the growth of the software industry, and contributed to the increased efficiency of IT departments in all sectors. This is attributable to the strengths of DevOps as a process, and all other efficiency measures that have been introduced in the software development processes. Obvious examples are the Agile methodology and the microservices architecture, but there are other equally-impressive measures such as the adoption of instant communication tools and the standardization of web protocols.</p>
+<p>During the recent adoption of DevOps, developers and other stakeholders have noticed that DevOps is suited for some use cases more than others, and its strengths and weaknesses as a novel technological methodology have been documented and explored over the years.</p>
+<p>Notable advantages (strengths) of adopting DevOps practices according to Maria Aleksandrova, a blogger dzone.com, are listed below<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>:</p>
+<ol>
+<li>Reducing the “chance of product failure” by continuously testing and getting and acting on customer feedback</li>
+<li>Improving “flexibility and support” by making software more scalable and easy to maintain</li>
+<li>Cutting down the time it takes to bring products to market</li>
+<li>Increasing team efficiency as all team members have complete ownership of the code they write even after it is deployed in production</li>
+<li>Increasing understanding of the product and making processes more transparent</li>
+</ol>
+<p>The above-listed advantages of adopting DevOps can only be realized if DevOps practices are adopted diligently and correctly. Failure to do so can lead to unintended consequences.</p>
+<p>In addition to the advantages, Aleksandrova also lists three main challenges that make it difficult for organizations to practice DevOps<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>. Those challenges are listed below with various guidances on how to address them:</p>
+<ol>
+<li>“Transitional challenges”: Depending on the existing software stack and codebases currently deployed in production, some organizations may face several challenges when they try to switch to an automated CICD workflow. One way to tackle this challenge is to start small by building proof-of-concept projects and deploying them incrementally in different environments, then slowly start transitioning non-critical components; and once the organization is confident in the new DevOps pipelines and processes, teams can start transitioning critical services and products.</li>
+<li>“Lack of talent”: As DevOps is a new field, there aren’t many experienced developers out there who have the knowledge and skills required to develop, use, and maintain DevOps tools. This has made it difficult for small and non-IT companies to adopt DevOps as they are competing with big tech companies for talent. One potential solution is to have internal training, or sending them to workshops and annual conferences where they can interact with other developers. Additionally, technical content, software related documentation, is increasingly freely-available online, making it easier for anyone who wants to learn to have unlimited access. Self-paced learning and hands-on practice should be encouraged by organizations, small and large, who want to stay ahead of the curve when it comes to DevOps talent.</li>
+<li>“Toolset choice”: The abundance of tech stacks and DevOps tools from which developers, teams, and organizations can choose from can be overwhelming. With increasing personalization and customization, there is a high chance that the combinations of tools that an organization chooses first won’t work as planned.  That is why experimenting is important. By trying out different tools, and getting feedback from developers and other stakeholders, organizations can pick and choose what works best without having to over-spent or waste valuable work-hours on tools that do not work.</li>
+</ol>
+<p>Overall, the pros and cons of DevOps vary from one team to another, and from one organization to another. The tools that work for a five to ten people startup will differ from the ones that work for a large university IT department and a multi-regional hospital. The underlying methodology of DevOps remains the same though, and its advantages as discussed in this section are obvious, as are its adoption challenges. The next section continues to explore those challenges, focusing on the biggest two transitional challenges: legacy software and data migration.</p>
+<h3 id="adoption">V. Adoption of DevOps Practices</h3>
+<p>The shift towards adopting DevOps practices in day to day operations of development teams has been largely driven by developers through online forums and communities; and by vendors and consulting services<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup>. These services who usually develop products that can be used as DevOps convince organizations to switch to their tools usually through initial trial programs, and later through paid subscriptions.</p>
+<p>The main challenge faced by organizations and teams trying to switch to DevOps is migrating legacy code. The DevOps pipelines are well-suited to the microservices architectures and modern application development which tend to be versioned and where rolling back to the previous stable versions is a feasible option. For most legacy software, these kinds of metadata and configuration layers are missing and they are encapsulated in other legacy tools, making the process of migration not only cumbersome but also expensive as some of those are paid.</p>
+<p>Another big challenge to migration is data migration. Most legacy systems interact with data that is stored in legacy database systems. Migrating these database systems or integrating them into the new DevOps pipelines can be costly, and there is a perceived increased risk of data loss or data breach that make some companies hold off the process indefinitely.  These privacy and security concerns are similar to the ones expressed by companies that haven’t migrated their infrastructure to the cloud, believing that on-premises infrastructure is more secure. Several data breaches in recent years have proven this to be false, and it is likely that we will continue to see more organizations switch to cloud, and adopt DevOps practices, in coming years.  These future trends and other likely future scenarios in the DevOps are discussed in the next section.</p>
+<h3 id="future">VI. Future Trends in DevOps</h3>
+<p>As more companies and organizations continue to adopt DevOps practices and the Agile methodology, DevOps will become mainstream, and it will start to be taught in computer science classes. However this is not guaranteed. As we have seen in the last few decades, the tech industry relies heavily on innovation and disruption to keep its momentum going, and I wouldn’t be surprised if there was another momentum shift in the next five or ten years. Assuming that DevOps adoption will continue on its current trajectory, listed below are the likely trends to look for in the coming decade according to Hussain at el<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup>:</p>
+<ul>
+<li>Increased specialization in knowledge areas such as “cloud &amp; network infrastructure” and &ldquo;Continuous Integration and Delivery and Deployment”</li>
+<li>Increased development of DevOps  technologies similar to existing build tools such as <em>Docker</em> and <em>Jenkins</em>, or configuration tools such as <em>Puppet</em> and <em>Ansible</em></li>
+<li>Increased popularity of scripting languages (and other languages that are used in DevOps pipelines) such as <em>Python</em>, <em>Javascript</em>, <em>Perl</em>, and <em>Bash</em></li>
+<li>Increased demand of human capabilities that work well with the DevOps methodology - similar to the Agile effect, organization will look for flexibility as key attribute when making hiring decisions</li>
+<li>Creation of more DevOps specific job titles such as DevOps engineer, CICD engineer, build engineer, cloud testing engineer, et cetera</li>
+</ul>
+<h3 id="conclusion">VII. Concluding Remarks</h3>
+<p>Innovation and disruption in the tech industry, and the increasing demand for software products and skills in recent years created an environment which made DevOps possible. The rise of quasi-similar culture shifts in the adoption of Agile across the industry, and the ongoing transition towards the microservices architecture, lent momentum to the growth of DevOps; and in turn, DevOps accelerated the adoption of those methodologies.</p>
+<p>This positive feedback loop is part of a bigger digital transformation that has made the tech industry more robust and profitable<sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">16</a></sup> as it has lowered the barrier to entry for teams whose main goal is to bring their products to the market as fast as possible and get immediate customer feedback before iterating and repeating the process until their products are stable and mature.</p>
+<p>Traditionally this “build fast and break fast” mentality has been embraced by startups and purely tech companies but in light of its success, it is likely that other organizations will also start embracing this mentality which involves following the DevOps practices. It is still early to tell if DevOps will continue to grow, or if other methodologies will take over, but as of now, it looks like DevOps is here to stay.</p>
+<!-- raw HTML omitted -->
+<h3 id="citations">Citations</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://devops.com/the-origins-of-devops-whats-in-a-name/">https://devops.com/the-origins-of-devops-whats-in-a-name/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://docs.microsoft.com/en-us/devops/what-is-devops">https://docs.microsoft.com/en-us/devops/what-is-devops</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>I. Sommerville, <em>Software engineering</em>, 10th ed. Boston: Pearson/Addison-Wesley, 2004, pp 47-48. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>C. Ebert, G. Gallardo, J. Hernantes and N. Serrano, &ldquo;<em>DevOps,</em>&rdquo; in IEEE Software, vol. 33, no. 3, pp. 94-100, May-June 2016, doi: 10.1109/MS.2016.68. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>L. Bass, I. Weber, and L. Zhu,_ DevOps: A Software Architect’s Perspective_, Addison-Wesley Profes- sional, 2015. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>L. Zhu, L. Bass and G. Champlin-Scharff, &ldquo;<em>DevOps and Its Practices</em>,&rdquo; in IEEE Software, vol. 33, no. 3, pp. 32-34, May-June 2016, doi: 10.1109/MS.2016.81. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api">https://www.redhat.com/en/topics/api/what-is-a-rest-api</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">https://developer.mozilla.org/en-US/docs/Web/HTTP/Status</a> <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p>Mohammad, Sikender Mohsienuddin, DevOps Automation and Agile Methodology (August 3, 2017). International Journal of Creative Research Thoughts (IJCRT), ISSN:2320-2882, Volume.5, Issue 3, pp.946-949, August-2017, Available at SSRN: <a href="https://ssrn.com/abstract=3655581">https://ssrn.com/abstract=3655581</a> <a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p>C. Ebert, G. Gallardo, J. Hernantes and N. Serrano, &ldquo;<em>DevOps,</em>&rdquo; in IEEE Software, vol. 33, no. 3, pp. 94-100, May-June 2016, doi: 10.1109/MS.2016.68. <a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p><a href="https://dzone.com/articles/benefits-and-challenges-of-taking-the-devops-route">https://dzone.com/articles/benefits-and-challenges-of-taking-the-devops-route</a> <a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13" role="doc-endnote">
+<p><a href="https://dzone.com/articles/benefits-and-challenges-of-taking-the-devops-route">https://dzone.com/articles/benefits-and-challenges-of-taking-the-devops-route</a> <a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:14" role="doc-endnote">
+<p>C. Ebert, G. Gallardo, J. Hernantes and N. Serrano, &ldquo;<em>DevOps,</em>&rdquo; in IEEE Software, vol. 33, no. 3, pp. 94-100, May-June 2016, doi: 10.1109/MS.2016.68. <a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:15" role="doc-endnote">
+<p>W. Hussain, T. Clear and S. MacDonell, &ldquo;Emerging Trends for Global DevOps: A New Zealand Perspective,&rdquo; 2017 IEEE 12th International Conference on Global Software Engineering (ICGSE), 2017, pp. 21-30, doi: 10.1109/ICGSE.2017.16. <a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:16" role="doc-endnote">
+<p>Wiedemann, Anna, et al. &ldquo;Research for practice: the DevOps phenomenon.&rdquo; <em>Communications of the ACM</em> 62.8 (2019): 44-49. <a href="#fnref:16" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+	</div>
+	
+	
+	
+	
+	
+		
+	
+		
+	
+	
+	
+	<div class="tags">
+		<div class="taxosfloating_left">
+			<p>Tags</p>
+		</div>
+		<div class="termsfloating_right">
+			<p>
+			
+			
+			
+			<a href="/tags/agile/"> agile </a>
+			
+			
+			
+			
+			
+			<a href="/tags/cloud-computing/"> cloud-computing </a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/devops/"> devops </a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<a href="/tags/microservices/"> microservices </a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		</div>
+		<div class="clearit"></div>
+		
+		
+		
+		
+		
+	</div></div>
+
+  </main>
+<footer>
+	 Patrick Niyongabo © 2021 | Made Using <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> Theme for <a href="https://gohugo.io">Hugo</a> 
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-81819868-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	
+</footer>
+
+
+</body>
+</html>

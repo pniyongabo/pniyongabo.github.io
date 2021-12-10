@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>agile on Patrick Niyongabo</title>
+		<link>https://patrickniyongabo.com/tags/agile/</link>
+		<description>Recent content in agile on patrickniyongabo.com</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>Patrick Niyongabo © 2021 | Made Using Vitae Theme for Hugo</copyright>
+		<lastBuildDate>Thu, 09 Dec 2021 19:13:49 -0700</lastBuildDate>
+		
+		<atom:link href="https://patrickniyongabo.com/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>DevOps Methodology</title>
+			<link>https://patrickniyongabo.com/posts/devops-methodology/</link>
+			<pubDate>Thu, 09 Dec 2021 19:13:49 -0700</pubDate>
+			
+			<guid>https://patrickniyongabo.com/posts/devops-methodology/</guid>
+			<description>
+				
+				An Emerging Methodology in Software Engineering
+				
+			</description>
+		</item>
+		
+	</channel>
+</rss>

@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>scaling on Patrick Niyongabo</title>
+		<title>Scaling on Patrick Niyongabo</title>
 		<link>https://patrickniyongabo.com/tags/scaling/</link>
-		<description>Recent content in scaling on patrickniyongabo.com</description>
+		<description>Recent content in Scaling on patrickniyongabo.com</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<copyright>Patrick Niyongabo © 2022 | Made Using Vitae Theme for Hugo</copyright>
+		<copyright>Patrick Niyongabo © 2025 | Made Using Vitae Theme for Hugo</copyright>
 		<lastBuildDate>Wed, 20 Oct 2021 15:13:49 -0700</lastBuildDate>
-		
 		<atom:link href="https://patrickniyongabo.com/tags/scaling/index.xml" rel="self" type="application/rss+xml" />
-		
 		<item>
 			<title>Vertical Scaling vs Horizontal Scaling</title>
 			<link>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</link>
 			<pubDate>Wed, 20 Oct 2021 15:13:49 -0700</pubDate>
-			
 			<guid>https://patrickniyongabo.com/posts/vertical-vs-horizontal/</guid>
 			<description>
-				
-				How to scale distributed systems
-				
+			How to scale distributed systems
 			</description>
 		</item>
-		
 	</channel>
 </rss>

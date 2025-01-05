@@ -6,35 +6,26 @@
 		<description>Recent content in Categories on patrickniyongabo.com</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<copyright>Patrick Niyongabo © 2022 | Made Using Vitae Theme for Hugo</copyright>
+		<copyright>Patrick Niyongabo © 2025 | Made Using Vitae Theme for Hugo</copyright>
 		<lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
-		
 		<atom:link href="https://patrickniyongabo.com/categories/index.xml" rel="self" type="application/rss+xml" />
-		
 		<item>
-			<title>syntax</title>
+			<title>Syntax</title>
 			<link>https://patrickniyongabo.com/categories/syntax/</link>
 			<pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-			
 			<guid>https://patrickniyongabo.com/categories/syntax/</guid>
 			<description>
-				
-				
-				
+			
 			</description>
 		</item>
 		<item>
-			<title>themes</title>
+			<title>Themes</title>
 			<link>https://patrickniyongabo.com/categories/themes/</link>
 			<pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-			
 			<guid>https://patrickniyongabo.com/categories/themes/</guid>
 			<description>
-				
-				
-				
+			
 			</description>
 		</item>
-		
 	</channel>
 </rss>

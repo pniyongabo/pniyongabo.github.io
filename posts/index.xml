@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2025 | Made Using Vitae Theme for Hugo</copyright>
-		<lastBuildDate>Thu, 09 Dec 2021 19:13:49 -0700</lastBuildDate>
+		<lastBuildDate>Sat, 04 Jan 2025 17:01:49 -0700</lastBuildDate>
 		<atom:link href="https://patrickniyongabo.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>2024 - Wrapped</title>
+			<link>https://patrickniyongabo.com/posts/wrapped-2024/</link>
+			<pubDate>Sat, 04 Jan 2025 17:01:49 -0700</pubDate>
+			<guid>https://patrickniyongabo.com/posts/wrapped-2024/</guid>
+			<description>
+			What I enjoyed in 2024
+			</description>
+		</item>
 		<item>
 			<title>DevOps Methodology</title>
 			<link>https://patrickniyongabo.com/posts/devops-methodology/</link>

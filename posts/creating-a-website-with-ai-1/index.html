@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Using AI to Build AIRTIFACT.COM (Part I) | Patrick Niyongabo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.140.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="airtifact.com, ai, claude, prompting">
+<meta name="description" content="Creating a web application with Claude">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+
+<meta property="og:url" content="https://patrickniyongabo.com/posts/creating-a-website-with-ai-1/">
+  <meta property="og:site_name" content="Patrick Niyongabo">
+  <meta property="og:title" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta property="og:description" content="Creating a web application with Claude">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-23T00:08:49-07:00">
+    <meta property="article:modified_time" content="2025-02-23T00:08:49-07:00">
+    <meta property="article:tag" content="Airtifact.com">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Claude">
+    <meta property="article:tag" content="Prompting">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta name="twitter:description" content="Creating a web application with Claude">
+
+
+  <meta itemprop="name" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta itemprop="description" content="Creating a web application with Claude">
+  <meta itemprop="datePublished" content="2025-02-23T00:08:49-07:00">
+  <meta itemprop="dateModified" content="2025-02-23T00:08:49-07:00">
+  <meta itemprop="wordCount" content="838">
+  <meta itemprop="keywords" content="Airtifact.com,Ai,Claude,Prompting">
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://patrickniyongabo.com/"><img src="/img/niyongabo.jpg" alt="Patrick Niyongabo"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://patrickniyongabo.com/">Patrick Niyongabo</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">hit-or-miss: my miscellaneous projects and random ideas</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/pniyongabo/" rel="me" aria-label="Github"><span title="Github" class="icons fab fa-github" aria-hidden="true"></span></a></li>
+<li><a href="https://www.linkedin.com/in/patrickniyongabo/" rel="me" aria-label="Linkedin"><span title="Linkedin" class="icons fab fa-linkedin" aria-hidden="true"></span></a></li>
+<li><a href="https://www.instagram.com/niyongabo2.0/" rel="me" aria-label="Instagram"><span title="Instagram" class="icons fab fa-instagram" aria-hidden="true"></span></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">23</span>
+<span class="rest">Feb 2025</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Using AI to Build AIRTIFACT.COM (Part I)</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This is the 1st blog post in a series where I will try to use AI tools to build AIRTIFACT.COM from scratch. My main goal is to learn and document how to effectively use LLMs through structured prompting.</p>
+<p>For brevity, I only included selected snippets of my prompts and AI responses. AIRTIFACT.COM&rsquo;s source code is available on <a href="https://github.com/pniyongabo/airtifact" target="_blank">Github</a>.</p>
+<p>In this post, I will describe how I used Claude to get started with a React web application that curates trending AI artifacts. In the following post, I will focus on adding new features, debugging, and fixing issues.</p>
+<h2 id="initial-project-definition">Initial Project Definition</h2>
+<h3 id="project-overview">Project Overview</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Prompt</span> <span class="c1">#1:</span>
+</span></span><span class="line"><span class="cl"><span class="n">I</span> <span class="n">have</span> <span class="n">a</span> <span class="n">domain</span> <span class="n">name</span> <span class="n">called</span> <span class="n">AIRTIFACT</span><span class="o">.</span><span class="n">COM</span><span class="o">.</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">make</span> <span class="n">a</span> <span class="n">web</span> <span class="n">app</span> <span class="n">that</span> <span class="n">displays</span>
+</span></span><span class="line"><span class="cl"><span class="n">AI</span> <span class="n">Artifacts</span> <span class="n">focusing</span> <span class="n">mostly</span> <span class="n">on</span> <span class="n">AI</span> <span class="n">generated</span> <span class="n">content</span><span class="p">,</span> <span class="n">specifically</span> <span class="n">curating</span> <span class="n">best</span> 
+</span></span><span class="line"><span class="cl"><span class="n">images</span><span class="p">,</span> <span class="n">music</span><span class="p">,</span> <span class="n">videos</span><span class="p">,</span> <span class="n">memes</span><span class="p">,</span> <span class="n">hallucinations</span> <span class="n">generated</span> <span class="n">by</span> <span class="n">LLMs</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">AI</span> <span class="n">tools</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">The</span> <span class="n">website</span> <span class="n">should</span> <span class="n">also</span> <span class="n">have</span> <span class="n">sections</span> <span class="n">containing</span> <span class="n">trending</span> <span class="n">blogs</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="ow">and</span> <span class="n">topics</span> <span class="ow">in</span> <span class="n">AI</span><span class="o">.</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">develop</span> <span class="n">the</span> <span class="n">code</span> <span class="n">on</span> <span class="n">github</span><span class="p">,</span> <span class="n">can</span> <span class="n">you</span> <span class="n">give</span> <span class="n">me</span> <span class="n">a</span> <span class="n">step</span> <span class="n">by</span> <span class="n">step</span> <span class="n">plans</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="ow">and</span> <span class="n">ask</span> <span class="n">me</span> <span class="n">questions</span> <span class="n">to</span> <span class="n">clarify</span> <span class="n">as</span> <span class="n">we</span> <span class="n">develop</span> <span class="n">the</span> <span class="n">ideas</span> <span class="n">together</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="o">----------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="o">----------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Response</span> <span class="c1">#1:</span>
+</span></span><span class="line"><span class="cl"><span class="n">I</span><span class="s1">&#39;ll help you plan the development of AIRTIFACT.COM. Let me start by asking </span>
+</span></span><span class="line"><span class="cl"><span class="n">some</span> <span class="n">key</span> <span class="n">questions</span> <span class="n">to</span> <span class="n">better</span> <span class="n">understand</span> <span class="n">your</span> <span class="n">vision</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mf">1.</span> <span class="n">User</span> <span class="n">Experience</span> <span class="o">&amp;</span> <span class="n">Features</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">users</span> <span class="n">to</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">submit</span> <span class="n">their</span> <span class="n">own</span> <span class="n">AI</span><span class="o">-</span><span class="n">generated</span> <span class="n">content</span><span class="p">,</span> <span class="ow">or</span> <span class="n">will</span> <span class="n">it</span> <span class="n">be</span> <span class="n">curator</span><span class="o">-</span><span class="n">only</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Should</span> <span class="n">users</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">create</span> <span class="n">accounts</span> <span class="ow">and</span> <span class="n">interact</span> <span class="n">with</span> <span class="n">the</span> <span class="n">content</span> <span class="p">(</span><span class="n">like</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">share</span><span class="p">)</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">implement</span> <span class="n">any</span> <span class="n">sorting</span><span class="o">/</span><span class="n">filtering</span> <span class="n">features</span> <span class="p">(</span><span class="n">by</span> <span class="n">AI</span> <span class="k">tool</span><span class="p">,</span> <span class="n">by</span> <span class="n">category</span><span class="p">,</span> <span class="n">by</span> <span class="n">popularity</span><span class="p">)</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl"><span class="mf">2.</span> <span class="n">Technical</span> <span class="n">Preferences</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">have</span> <span class="n">any</span> <span class="n">preferred</span> <span class="n">tech</span> <span class="n">stack</span> <span class="ow">or</span> <span class="n">framework</span> <span class="ow">in</span> <span class="n">mind</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">have</span> <span class="n">experience</span> <span class="n">with</span> <span class="n">specific</span> <span class="n">programming</span> <span class="n">languages</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Are</span> <span class="n">you</span> <span class="n">planning</span> <span class="n">to</span> <span class="n">handle</span> <span class="n">this</span> <span class="n">alone</span> <span class="ow">or</span> <span class="n">with</span> <span class="n">a</span> <span class="n">team</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl"><span class="mf">3.</span> <span class="n">Content</span> <span class="n">Organization</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">What</span> <span class="n">are</span> <span class="n">the</span> <span class="n">main</span> <span class="n">categories</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">include</span><span class="err">?</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">Images</span><span class="p">,</span> <span class="n">Music</span><span class="p">,</span> <span class="n">Videos</span><span class="p">,</span> <span class="n">Text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">How</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">handle</span> <span class="n">content</span> <span class="n">moderation</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">implement</span> <span class="n">tagging</span><span class="o">/</span><span class="n">categorization</span> <span class="n">by</span> <span class="n">AI</span> <span class="k">tool</span> <span class="p">(</span><span class="n">like</span> <span class="n">DALL</span><span class="o">-</span><span class="n">E</span><span class="p">,</span> <span class="n">Midjourney</span><span class="p">,</span> <span class="n">GPT</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl"><span class="mf">4.</span> <span class="n">Monetization</span> <span class="o">&amp;</span> <span class="n">Scale</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Are</span> <span class="n">you</span> <span class="n">planning</span> <span class="n">to</span> <span class="n">monetize</span> <span class="n">the</span> <span class="n">platform</span><span class="err">?</span> <span class="n">If</span> <span class="n">yes</span><span class="p">,</span> <span class="n">how</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">What</span><span class="s1">&#39;s your expected traffic volume initially?</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">need</span> <span class="n">any</span> <span class="n">specific</span> <span class="n">analytics</span> <span class="ow">or</span> <span class="n">tracking</span> <span class="n">features</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Once</span> <span class="n">you</span> <span class="n">provide</span> <span class="n">these</span> <span class="n">details</span><span class="p">,</span> <span class="n">I</span> <span class="n">can</span> <span class="n">help</span> <span class="n">create</span> <span class="n">a</span> <span class="n">more</span> <span class="n">detailed</span> <span class="n">development</span> <span class="n">plan</span> 
+</span></span><span class="line"><span class="cl"><span class="ow">and</span> <span class="n">GitHub</span> <span class="n">repository</span> <span class="n">structure</span><span class="o">.</span> <span class="n">Let</span><span class="s1">&#39;s start with these questions and build from there!</span>
+</span></span></code></pre></div><h2 id="requirements-gathering">Requirements Gathering</h2>
+<h3 id="clarifying-requirements">Clarifying Requirements</h3>
+<p>The AI assistant asked key questions about:</p>
+<ol>
+<li>User Experience &amp; Features</li>
+<li>Technical Preferences</li>
+<li>Content Organization</li>
+<li>Monetization &amp; Scale</li>
+</ol>
+<h3 id="my-response">My response</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt #2:
+</span></span><span class="line"><span class="cl">1. User Experience &amp; Features: To start, I only want curation. No users accounts. 
+</span></span><span class="line"><span class="cl">   and to begin, always sort popularity. custom sorting can be added later.
+</span></span><span class="line"><span class="cl">2. Technical Preferences: I prefer node or javascript applications. I have 
+</span></span><span class="line"><span class="cl">   experience with python and streamlit.io. I will handle this alone.
+</span></span><span class="line"><span class="cl">3. Content Organization: main categories are images and text. for content 
+</span></span><span class="line"><span class="cl">   moderation, no nsfw content. tagging and categorization can be added later.
+</span></span><span class="line"><span class="cl">4. Monetization &amp; Scale: no monetization, keep it open source. traffic will be 
+</span></span><span class="line"><span class="cl">   very low. no analytics needed.
+</span></span></code></pre></div><h2 id="technical-setup">Technical Setup</h2>
+<h3 id="technical-structure">Technical Structure</h3>
+<p>The AI suggested a technical stack and repository structure, followed by specific questions about:</p>
+<ol>
+<li>Metadata requirements</li>
+<li>Layout preferences</li>
+<li>Search functionality</li>
+<li>Content management approach</li>
+</ol>
+<h3 id="my-response-1">My Response</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt #3:
+</span></span><span class="line"><span class="cl">1. Metadata: date created and brief description
+</span></span><span class="line"><span class="cl">2. Layout: masonry layout for images
+</span></span><span class="line"><span class="cl">3. Search: no search initially
+</span></span><span class="line"><span class="cl">4. Content Management: manage content directly through GitHub
+</span></span></code></pre></div><h2 id="implementation-process">Implementation Process</h2>
+<h3 id="component-development">Component Development</h3>
+<p>I requested implementation of specific components:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt #4:
+</span></span><span class="line"><span class="cl">Let&#39;s start with The basic layout component, and tell me how I can launch 
+</span></span><span class="line"><span class="cl">the app and test in local
+</span></span></code></pre></div><h3 id="content-addition-after-initial-setup">Content Addition After Initial Setup</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt #5:
+</span></span><span class="line"><span class="cl">Let&#39;s add more text content. similar with images, implement the &#39;View All 
+</span></span><span class="line"><span class="cl">Text Content&#39; functionality
+</span></span></code></pre></div><h3 id="layout-refinement">Layout Refinement</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt #6:
+</span></span><span class="line"><span class="cl">On the front page, also display text content in grid format. same width 
+</span></span><span class="line"><span class="cl">and height as images
+</span></span></code></pre></div><h2 id="key-learnings-from-the-process">Key Learnings from the Process</h2>
+<ol>
+<li>
+<p><strong>Incremental Development</strong></p>
+<ul>
+<li>Started with basic features</li>
+<li>Added complexity gradually</li>
+<li>Focused on one component at a time</li>
+</ul>
+</li>
+<li>
+<p><strong>Clear Communication</strong></p>
+<ul>
+<li>Specific requirements</li>
+<li>Direct feedback</li>
+<li>Iterative improvements</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature Prioritization</strong></p>
+<ul>
+<li>Core functionality first</li>
+<li>Aesthetic improvements second</li>
+<li>Advanced features deferred</li>
+</ul>
+</li>
+</ol>
+<h2 id="effective-prompting-patterns">Effective Prompting Patterns</h2>
+<ol>
+<li>
+<p><strong>Start Broad, Then Narrow</strong></p>
+<ul>
+<li>Begin with overall vision</li>
+<li>Break down into specific requirements</li>
+<li>Focus on individual components</li>
+</ul>
+</li>
+<li>
+<p><strong>Be Specific About Needs</strong></p>
+<ul>
+<li>Clear technical preferences</li>
+<li>Explicit layout requirements</li>
+<li>Specific functionality requests</li>
+</ul>
+</li>
+<li>
+<p><strong>Iterative Refinement</strong></p>
+<ul>
+<li>Test implementations</li>
+<li>Request modifications</li>
+<li>Build upon working components</li>
+</ul>
+</li>
+</ol>
+<h2 id="results">Results</h2>
+<p>At the end I had a working React/Next.js web application that can displays images and texts.</p>
+<p>After launching the application using the <code>npm run dev</code> command, and opening http://localhost:3000/, I see:</p>
+<p><figure>
+  <img src="airtifact-2.png" alt="homepage of airtifact.com after initial setup"  />
+</figure></p>
+<!-- raw HTML omitted -->
+<h2 id="notes">Notes</h2>
+<p>I used Claude to generate an early draft of this post by using the following prompts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt #7a:
+</span></span><span class="line"><span class="cl">Summarize what we have done so far in how-to blog post with minimal code examples. format the blog post in markdown format.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Prompt #7b:
+</span></span><span class="line"><span class="cl">Try again, and this time focus on the prompts I am using to get your help in building this website.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Prompt #7c:
+</span></span><span class="line"><span class="cl">Can you convert the above output in markdown source code
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/ai/">ai</a>
+<a href="/tags/airtifact.com/">airtifact.com</a>
+<a href="/tags/claude/">claude</a>
+<a href="/tags/prompting/">prompting</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+Patrick Niyongabo © 2025 | Made Using <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> Theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

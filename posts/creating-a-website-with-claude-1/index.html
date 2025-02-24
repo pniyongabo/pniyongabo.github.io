@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Using AI to Build AIRTIFACT.COM (Part I) | Patrick Niyongabo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.140.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="airtifact.com, ai, claude, prompting">
+<meta name="description" content="Creating a web application with Claude">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+
+<meta property="og:url" content="https://patrickniyongabo.com/posts/creating-a-website-with-claude-1/">
+  <meta property="og:site_name" content="Patrick Niyongabo">
+  <meta property="og:title" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta property="og:description" content="Creating a web application with Claude">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-23T00:08:49-07:00">
+    <meta property="article:modified_time" content="2025-02-23T00:08:49-07:00">
+    <meta property="article:tag" content="Airtifact.com">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Claude">
+    <meta property="article:tag" content="Prompting">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta name="twitter:description" content="Creating a web application with Claude">
+
+
+  <meta itemprop="name" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta itemprop="description" content="Creating a web application with Claude">
+  <meta itemprop="datePublished" content="2025-02-23T00:08:49-07:00">
+  <meta itemprop="dateModified" content="2025-02-23T00:08:49-07:00">
+  <meta itemprop="wordCount" content="799">
+  <meta itemprop="keywords" content="Airtifact.com,Ai,Claude,Prompting">
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://patrickniyongabo.com/"><img src="/img/niyongabo.jpg" alt="Patrick Niyongabo"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://patrickniyongabo.com/">Patrick Niyongabo</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">hit-or-miss: my miscellaneous projects and random ideas</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/pniyongabo/" rel="me" aria-label="Github"><span title="Github" class="icons fab fa-github" aria-hidden="true"></span></a></li>
+<li><a href="https://www.linkedin.com/in/patrickniyongabo/" rel="me" aria-label="Linkedin"><span title="Linkedin" class="icons fab fa-linkedin" aria-hidden="true"></span></a></li>
+<li><a href="https://www.instagram.com/niyongabo2.0/" rel="me" aria-label="Instagram"><span title="Instagram" class="icons fab fa-instagram" aria-hidden="true"></span></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">23</span>
+<span class="rest">Feb 2025</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Using AI to Build AIRTIFACT.COM (Part I)</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This is the 1st blog post in a series where I will try to use AI tools to build AIRTIFACT.COM from scratch. My main goal is to learn and document how to effectively use LLMs through structured prompting. For brevity, I only included selected snippets of my prompts and AI responses.</p>
+<p>In this post, I will describe how I used Claude to get started with a React web application that curates trending AI artifacts. In the following post, I will focus on adding new features, debugging, and fixing issues.</p>
+<h2 id="initial-project-definition">Initial Project Definition</h2>
+<h3 id="project-overview">Project Overview</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>Prompt <span style="color:#888">#1:</span>
+</span></span><span style="display:flex;"><span>I have a domain name called AIRTIFACT<span style="color:#333">.</span>COM<span style="color:#333">.</span> I want to make a web app that displays
+</span></span><span style="display:flex;"><span>AI Artifacts focusing mostly on AI generated content, specifically curating best 
+</span></span><span style="display:flex;"><span>images, music, videos, memes, hallucinations generated by LLMs <span style="color:#000;font-weight:bold">and</span> other AI tools<span style="color:#333">.</span>
+</span></span><span style="display:flex;"><span>The website should also have sections containing trending blogs, articles, <span style="color:#000;font-weight:bold">and</span> topics <span style="color:#000;font-weight:bold">in</span> AI<span style="color:#333">.</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>I want to develop the code on github, can you give me a step by step plans, 
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">and</span> ask me questions to clarify as we develop the ideas together<span style="color:#333">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#333">----------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#333">----------------------------------</span>
+</span></span><span style="display:flex;"><span>Response <span style="color:#888">#1:</span>
+</span></span><span style="display:flex;"><span>I<span style="background-color:#fff0f0">&#39;ll help you plan the development of AIRTIFACT.COM. Let me start by asking </span>
+</span></span><span style="display:flex;"><span>some key questions to better understand your vision:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#60e;font-weight:bold">1.</span> User Experience <span style="color:#333">&amp;</span> Features:
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Do you want users to be able to submit their own AI<span style="color:#333">-</span>generated content, <span style="color:#000;font-weight:bold">or</span> will it be curator<span style="color:#333">-</span>only<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Should users be able to create accounts <span style="color:#000;font-weight:bold">and</span> interact with the content (like, comment, share)<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Do you want to implement any sorting<span style="color:#333">/</span>filtering features (by AI <span style="color:#080;font-weight:bold">tool</span>, by category, by popularity)<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span><span style="color:#60e;font-weight:bold">2.</span> Technical Preferences:
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Do you have any preferred tech stack <span style="color:#000;font-weight:bold">or</span> framework <span style="color:#000;font-weight:bold">in</span> mind<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Do you have experience with specific programming languages<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Are you planning to handle this alone <span style="color:#000;font-weight:bold">or</span> with a team<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span><span style="color:#60e;font-weight:bold">3.</span> Content Organization:
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> What are the main categories you want to include<span style="color:#f00;background-color:#faa">?</span> (e<span style="color:#333">.</span>g<span style="color:#333">.</span>, Images, Music, Videos, Text)
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> How <span style="color:#080;font-weight:bold">do</span> you want to handle content moderation<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Do you want to implement tagging<span style="color:#333">/</span>categorization by AI <span style="color:#080;font-weight:bold">tool</span> (like DALL<span style="color:#333">-</span>E, Midjourney, GPT, etc<span style="color:#333">.</span>)<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span><span style="color:#60e;font-weight:bold">4.</span> Monetization <span style="color:#333">&amp;</span> Scale:
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Are you planning to monetize the platform<span style="color:#f00;background-color:#faa">?</span> If yes, how<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> What<span style="background-color:#fff0f0">&#39;s your expected traffic volume initially?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#333">-</span> Do you need any specific analytics <span style="color:#000;font-weight:bold">or</span> tracking features<span style="color:#f00;background-color:#faa">?</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Once you provide these details, I can help create a more detailed development plan 
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">and</span> GitHub repository structure<span style="color:#333">.</span> Let<span style="background-color:#fff0f0">&#39;s start with these questions and build from there!</span>
+</span></span></code></pre></div><h2 id="requirements-gathering">Requirements Gathering</h2>
+<h3 id="clarifying-requirements">Clarifying Requirements</h3>
+<p>The AI assistant asked key questions about:</p>
+<ol>
+<li>User Experience &amp; Features</li>
+<li>Technical Preferences</li>
+<li>Content Organization</li>
+<li>Monetization &amp; Scale</li>
+</ol>
+<h3 id="my-response">My response</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Prompt #2:
+</span></span><span style="display:flex;"><span>1. User Experience &amp; Features: To start, I only want curation. No users accounts. 
+</span></span><span style="display:flex;"><span>   and to begin, always sort popularity. custom sorting can be added later.
+</span></span><span style="display:flex;"><span>2. Technical Preferences: I prefer node or javascript applications. I have 
+</span></span><span style="display:flex;"><span>   experience with python and streamlit.io. I will handle this alone.
+</span></span><span style="display:flex;"><span>3. Content Organization: main categories are images and text. for content 
+</span></span><span style="display:flex;"><span>   moderation, no nsfw content. tagging and categorization can be added later.
+</span></span><span style="display:flex;"><span>4. Monetization &amp; Scale: no monetization, keep it open source. traffic will be 
+</span></span><span style="display:flex;"><span>   very low. no analytics needed.
+</span></span></code></pre></div><h2 id="technical-setup">Technical Setup</h2>
+<h3 id="technical-structure">Technical Structure</h3>
+<p>The AI suggested a technical stack and repository structure, followed by specific questions about:</p>
+<ol>
+<li>Metadata requirements</li>
+<li>Layout preferences</li>
+<li>Search functionality</li>
+<li>Content management approach</li>
+</ol>
+<h3 id="my-response-1">My Response</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Prompt #3:
+</span></span><span style="display:flex;"><span>1. Metadata: date created and brief description
+</span></span><span style="display:flex;"><span>2. Layout: masonry layout for images
+</span></span><span style="display:flex;"><span>3. Search: no search initially
+</span></span><span style="display:flex;"><span>4. Content Management: manage content directly through GitHub
+</span></span></code></pre></div><h2 id="implementation-process">Implementation Process</h2>
+<h3 id="component-development">Component Development</h3>
+<p>I requested implementation of specific components:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Prompt #4:
+</span></span><span style="display:flex;"><span>Let&#39;s start with The basic layout component, and tell me how I can launch 
+</span></span><span style="display:flex;"><span>the app and test in local
+</span></span></code></pre></div><h3 id="content-addition-after-initial-setup">Content Addition After Initial Setup</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Prompt #5:
+</span></span><span style="display:flex;"><span>&#34;Let&#39;s add more text content. similar with images, implement the &#39;View All 
+</span></span><span style="display:flex;"><span>Text Content&#39; functionality&#34;
+</span></span></code></pre></div><h3 id="layout-refinement">Layout Refinement</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Prompt #6:
+</span></span><span style="display:flex;"><span>&#34;On the front page, also display text content in grid format. same width 
+</span></span><span style="display:flex;"><span>and height as images&#34;
+</span></span></code></pre></div><h2 id="key-learnings-from-the-process">Key Learnings from the Process</h2>
+<ol>
+<li>
+<p><strong>Incremental Development</strong></p>
+<ul>
+<li>Started with basic features</li>
+<li>Added complexity gradually</li>
+<li>Focused on one component at a time</li>
+</ul>
+</li>
+<li>
+<p><strong>Clear Communication</strong></p>
+<ul>
+<li>Specific requirements</li>
+<li>Direct feedback</li>
+<li>Iterative improvements</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature Prioritization</strong></p>
+<ul>
+<li>Core functionality first</li>
+<li>Aesthetic improvements second</li>
+<li>Advanced features deferred</li>
+</ul>
+</li>
+</ol>
+<h2 id="effective-prompting-patterns">Effective Prompting Patterns</h2>
+<ol>
+<li>
+<p><strong>Start Broad, Then Narrow</strong></p>
+<ul>
+<li>Begin with overall vision</li>
+<li>Break down into specific requirements</li>
+<li>Focus on individual components</li>
+</ul>
+</li>
+<li>
+<p><strong>Be Specific About Needs</strong></p>
+<ul>
+<li>Clear technical preferences</li>
+<li>Explicit layout requirements</li>
+<li>Specific functionality requests</li>
+</ul>
+</li>
+<li>
+<p><strong>Iterative Refinement</strong></p>
+<ul>
+<li>Test implementations</li>
+<li>Request modifications</li>
+<li>Build upon working components</li>
+</ul>
+</li>
+</ol>
+<h2 id="notes">Notes</h2>
+<p>I used Claude to generate an early draft of this post by using the following prompts:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Prompt #7a:
+</span></span><span style="display:flex;"><span>Summarize what we have done so far in how-to blog post with minimal code examples. format the blog post in markdown format.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Prompt #7b:
+</span></span><span style="display:flex;"><span>Try again, and this time focus on the prompts I am using to get your help in building this website.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Prompt #7c:
+</span></span><span style="display:flex;"><span>Can you convert the above output in markdown source code
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/ai/">ai</a>
+<a href="/tags/airtifact.com/">airtifact.com</a>
+<a href="/tags/claude/">claude</a>
+<a href="/tags/prompting/">prompting</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+Patrick Niyongabo © 2025 | Made Using <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> Theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

@@ -7,12 +7,12 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2025 | Made Using Vitae Theme for Hugo</copyright>
-		<lastBuildDate>Sun, 23 Feb 2025 00:08:49 -0700</lastBuildDate>
+		<lastBuildDate>Thu, 27 Feb 2025 00:08:49 -0700</lastBuildDate>
 		<atom:link href="https://patrickniyongabo.com/tags/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Ai</title>
 			<link>https://patrickniyongabo.com/tags/ai/</link>
-			<pubDate>Sun, 23 Feb 2025 00:08:49 -0700</pubDate>
+			<pubDate>Thu, 27 Feb 2025 00:08:49 -0700</pubDate>
 			<guid>https://patrickniyongabo.com/tags/ai/</guid>
 			<description>
 			
@@ -21,7 +21,7 @@
 		<item>
 			<title>Airtifact.com</title>
 			<link>https://patrickniyongabo.com/tags/airtifact.com/</link>
-			<pubDate>Sun, 23 Feb 2025 00:08:49 -0700</pubDate>
+			<pubDate>Thu, 27 Feb 2025 00:08:49 -0700</pubDate>
 			<guid>https://patrickniyongabo.com/tags/airtifact.com/</guid>
 			<description>
 			
@@ -30,7 +30,7 @@
 		<item>
 			<title>Claude</title>
 			<link>https://patrickniyongabo.com/tags/claude/</link>
-			<pubDate>Sun, 23 Feb 2025 00:08:49 -0700</pubDate>
+			<pubDate>Thu, 27 Feb 2025 00:08:49 -0700</pubDate>
 			<guid>https://patrickniyongabo.com/tags/claude/</guid>
 			<description>
 			
@@ -39,8 +39,26 @@
 		<item>
 			<title>Prompting</title>
 			<link>https://patrickniyongabo.com/tags/prompting/</link>
-			<pubDate>Sun, 23 Feb 2025 00:08:49 -0700</pubDate>
+			<pubDate>Thu, 27 Feb 2025 00:08:49 -0700</pubDate>
 			<guid>https://patrickniyongabo.com/tags/prompting/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Stability.ai</title>
+			<link>https://patrickniyongabo.com/tags/stability.ai/</link>
+			<pubDate>Thu, 27 Feb 2025 00:08:49 -0700</pubDate>
+			<guid>https://patrickniyongabo.com/tags/stability.ai/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Webapp</title>
+			<link>https://patrickniyongabo.com/tags/webapp/</link>
+			<pubDate>Thu, 27 Feb 2025 00:08:49 -0700</pubDate>
+			<guid>https://patrickniyongabo.com/tags/webapp/</guid>
 			<description>
 			
 			</description>

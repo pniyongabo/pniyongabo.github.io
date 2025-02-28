@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Using AI to Build AIRTIFACT.COM (Part II) | Patrick Niyongabo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.140.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="airtifact.com, ai, claude, prompting, webapp, stability.ai">
+<meta name="description" content="Image Generation using Stability AI">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+
+<meta property="og:url" content="https://patrickniyongabo.com/posts/creating-a-website-with-ai-2/">
+  <meta property="og:site_name" content="Patrick Niyongabo">
+  <meta property="og:title" content="Using AI to Build AIRTIFACT.COM (Part II)">
+  <meta property="og:description" content="Image Generation using Stability AI">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-27T00:08:49-07:00">
+    <meta property="article:modified_time" content="2025-02-27T00:08:49-07:00">
+    <meta property="article:tag" content="Airtifact.com">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Claude">
+    <meta property="article:tag" content="Prompting">
+    <meta property="article:tag" content="Webapp">
+    <meta property="article:tag" content="Stability.ai">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using AI to Build AIRTIFACT.COM (Part II)">
+  <meta name="twitter:description" content="Image Generation using Stability AI">
+
+
+  <meta itemprop="name" content="Using AI to Build AIRTIFACT.COM (Part II)">
+  <meta itemprop="description" content="Image Generation using Stability AI">
+  <meta itemprop="datePublished" content="2025-02-27T00:08:49-07:00">
+  <meta itemprop="dateModified" content="2025-02-27T00:08:49-07:00">
+  <meta itemprop="wordCount" content="815">
+  <meta itemprop="keywords" content="Airtifact.com,Ai,Claude,Prompting,Webapp,Stability.ai">
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://patrickniyongabo.com/"><img src="/img/niyongabo.jpg" alt="Patrick Niyongabo"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://patrickniyongabo.com/">Patrick Niyongabo</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Hits and Misses: Miscellaneous Projects and Ideas</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/pniyongabo/" rel="me" aria-label="Github"><span title="Github" class="icons fab fa-github" aria-hidden="true"></span></a></li>
+<li><a href="https://www.linkedin.com/in/patrickniyongabo/" rel="me" aria-label="Linkedin"><span title="Linkedin" class="icons fab fa-linkedin" aria-hidden="true"></span></a></li>
+<li><a href="https://www.instagram.com/niyongabo2.0/" rel="me" aria-label="Instagram"><span title="Instagram" class="icons fab fa-instagram" aria-hidden="true"></span></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">27</span>
+<span class="rest">Feb 2025</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Using AI to Build AIRTIFACT.COM (Part II)</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This is the 2nd blog post in a series where I document how I am using AI tools to build AIRTIFACT.COM from scratch.
+Link to <a href="https://patrickniyongabo.com/posts/creating-a-website-with-ai-1/">the 1st blog post</a> where I described how to get started on a new project by using an AI chatbot (Claude, ChatGPT, etc).</p>
+<p>In this post, I describe how I used Claude to add an image generation feature.</p>
+<h2 id="initial-feature-discussion">Initial Feature Discussion</h2>
+<h3 id="feature-proposal">Feature Proposal</h3>
+<p>After chatting with Claude, and asking for guidance on how to structure the previous blog post.
+I prompted Claude to go back to Building! Then I asked how to dynamically generate images and poems using LLMs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt 1: 
+</span></span><span class="line"><span class="cl">Let&#39;s go back to building. i want to dynamically generate images and poems using llm apis. can you help?
+</span></span></code></pre></div><h2 id="requirements-analysis">Requirements Analysis</h2>
+<h3 id="api-selection">API Selection</h3>
+<p>Claude responded by presenting options for:</p>
+<ol>
+<li>Image Generation APIs</li>
+<li>Text Generation APIs</li>
+<li>Cost considerations</li>
+</ol>
+<h3 id="my-response">My Response</h3>
+<p>I responded by focusing on cost, as this is a hobby project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt 2:
+</span></span><span class="line"><span class="cl">Let&#39;s use free options for now. or cheap ones.
+</span></span></code></pre></div><h2 id="technical-implementation">Technical Implementation</h2>
+<h3 id="api-integration-choice">API Integration Choice</h3>
+<p>Claude suggested starting with:</p>
+<ol>
+<li>Stability AI for images (1000 free images/month)</li>
+<li>GPT-3.5-turbo for poems (cost-effective option)</li>
+</ol>
+<h3 id="my-response-1">My Response</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt 3:
+</span></span><span class="line"><span class="cl">Let&#39;s go with Stable Diffusion. Do i need an account and an api key?
+</span></span></code></pre></div><h2 id="implementation-process">Implementation Process</h2>
+<h3 id="initial-setup">Initial Setup</h3>
+<p>Claude responded that I need an account and an API key for Stability AI, and described how to set it up:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Yes, you&#39;ll need an account and API key for Stability AI. Here&#39;s how to get set up:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. Create an account at https://platform.stability.ai/
+</span></span><span class="line"><span class="cl">2. After signing up, go to https://platform.stability.ai/account/keys to get your API key
+</span></span><span class="line"><span class="cl">3. You&#39;ll get 1000 free image generations per month
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Let me know once you have your API key.
+</span></span></code></pre></div><p>After creating a free account account on Stability AI, and generating an API key, I responded to Claude.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt 4:
+</span></span><span class="line"><span class="cl">I have a key for stability.ai
+</span></span></code></pre></div><p>After this prompt, Claude responded by instructing me to install the <em>axios</em> package the by running <code>npm install @stability/api axios</code>, and also gave me the full code for the API route at <code>pages/api/generate-image.js</code>, the admin page at <code>pages/admin/generate.js</code>, and the corresponding CSS module at <code>styles/Admin.module.css</code>.</p>
+<p>Additionally, Claude also included step-by-step instruction on how to test this feature:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">To test this:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. Make sure your .env.local file has your API key
+</span></span><span class="line"><span class="cl">2. Create the public/images directory if it doesn&#39;t exist:
+</span></span><span class="line"><span class="cl">mkdir -p public/images
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3. Run your development server:
+</span></span><span class="line"><span class="cl">npm run dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Visit http://localhost:3000/admin/generate
+</span></span></code></pre></div><h3 id="error-resolution">Error Resolution</h3>
+<p>After following these above instructions, I hit the following error message, I asked Claude about it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt 5:
+</span></span><span class="line"><span class="cl">Getting this error: Error: Incorrect API key provided: ${proce*********************KEY}.
+</span></span><span class="line"><span class="cl">You can find your API key at https://stability.ai.
+</span></span></code></pre></div><p>Claude responded by explaining that this error is due to Next.js not properly reading the environment variable for the stability.ai API key. To resolve it, Claude instructed me to create an <code>.env.local</code> file, and add my API key as one-liner <code>STABILITY_API_KEY=sk-your-actual-key-here</code></p>
+<p>After creating the file, and adding the key I kept getting &lsquo;API key&rsquo; related errors due to the faulty logic. Claude suggested I add some logging, and I did. And after a couple iterations of testing, I realized that the API key env variable was not being interpolated correctly. I fixed the error by fixing the code in <code>pages/api/generate-image.js</code>.</p>
+<h3 id="image-display-fix">Image Display Fix</h3>
+<p>After fixing the API key error, I got the generate button to work, and I could a 200 API response in the logs. However the image wasn&rsquo;t being displayed correctly. I submitted the following prompt.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prompt 6:
+</span></span><span class="line"><span class="cl">It is now working but the image is not getting displayed correctly. I think the issue is with the name
+</span></span></code></pre></div><p>Claude suggested changes to all the 3 files (API route, generate page, and CSS module), but the error persisted. After a couple iterations, I gave up on Claude and looked into the actual code. I realized two issues:</p>
+<ol>
+<li>faulty naming of files: Claude was using the timestamp in its naming format, and that was breaking file lookup. To resolve I suggested to Claude to use a simple name that adds dashes to the the entered prompt.</li>
+<li>escaping special characters is broken: with the above fix in place, I could see that the images files were being saved correctly but the lookup was still broken. I looked into the code and noticed that Claude escape special characters in its output (I assume this to enable preview markdown and code blocks in its output). However, when copied verbatim, this breaks the lookup of env variables. As an example, this is how Claude was outputting the filename declaration: <code>const filename = `generated-\${timestamp}.png` </code>, I fixed this by removing the <code>'\'</code>symbol.</li>
+</ol>
+<h2 id="results">Results</h2>
+<p>At the end of this session, I had a working page where users can dynamically generate images by entering text prompts.</p>
+<p>Users can navigate to <code>/admin/generate</code>, add a prompt; Stability.AI&rsquo;s API will be called to generate an image. The resulting image will be displayed as shown below.</p>
+<!-- raw HTML omitted -->
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/ai/">ai</a>
+<a href="/tags/airtifact.com/">airtifact.com</a>
+<a href="/tags/claude/">claude</a>
+<a href="/tags/prompting/">prompting</a>
+<a href="/tags/stability.ai/">stability.ai</a>
+<a href="/tags/webapp/">webapp</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+Patrick Niyongabo © 2025 | Made Using <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> Theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

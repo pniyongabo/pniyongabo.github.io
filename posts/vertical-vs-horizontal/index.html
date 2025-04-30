@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
   <meta itemprop="description" content="How to scale distributed systems">
   <meta itemprop="datePublished" content="2021-10-20T15:13:49-07:00">
   <meta itemprop="dateModified" content="2021-10-20T15:13:49-07:00">
-  <meta itemprop="wordCount" content="319">
+  <meta itemprop="wordCount" content="356">
   <meta itemprop="keywords" content="Databases,Scaling,Distributed Systems,Vertical Scaling,Horizontal Scaling">
 </head>
 <body>
@@ -114,8 +114,10 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 <blockquote>
 <p><code>Horizontal Scaling</code> involves dividing the system dataset and load over multiple servers, adding additional servers to increase capacity as required.</p>
 </blockquote>
-<p>Based on these definitions above, you can see why modern distributed systems (cloud databases and other high-traffic systems) have embraced horizontal scaling. With vertical scaling, there is a limit to how much CPU/memory/storage can be added to a DB/compute instance. With horizontal scaling, systems can be built using commodity hardware; you don&rsquo;t have to use the latest-gen infrastructure, instead you can chain multiple cheap server racks together. The added advantage of using this approach is that horizontal scaling improves the overall health of the system by providing fault-tolerancy in a case some of the instances crash or in a case of a network issue.</p>
-<p>With all that said, horizontal scaling has its dis-advantages, the main one being that you will need to implement an efficient (sometimes complex) mechanism for up/down scaling and other related processes (creating and maintaing replicas for example).</p>
+<p>Based on these definitions above, you can see why modern distributed systems (cloud databases and other high-traffic systems) have embraced horizontal scaling. With vertical scaling, there is a limit to how much CPU/memory/storage can be added to a DB/compute instance. This ceiling can become a significant bottleneck as systems grow.</p>
+<p>With horizontal scaling, systems can be built using commodity hardware; you don&rsquo;t have to use the latest-gen infrastructure, instead you can chain multiple cheap server racks together. The added advantage of using this approach is that horizontal scaling improves the overall health of the system by providing fault tolerance when instances crash or network issues occur.</p>
+<p>With all that said, horizontal scaling has its disadvantages, the main one being that you will need to implement an efficient (sometimes complex) mechanism for up/down scaling and other related processes (creating and maintaining replicas for example).</p>
+<p>The choice between vertical and horizontal scaling ultimately depends on your specific use case, but for modern cloud-native applications requiring high availability and scalability, horizontal scaling has become the preferred approach despite its added complexity.</p>
 
 </div>
 <div class="tags">

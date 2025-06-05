@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Using AI to Build AIRTIFACT.COM (Part I) | Patrick Niyongabo</title>
+<title>Using AI to Build AIRTIFACT.NET (Part I) | Patrick Niyongabo</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.140.2">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="airtifact.com, ai, claude, prompting, webapp">
+<meta name="keywords" content="airtifact.net, ai, claude, prompting, webapp">
 <meta name="description" content="Using Claude to Create a WebApp">
 <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
@@ -23,30 +23,30 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 
 <meta property="og:url" content="https://patrickniyongabo.com/posts/creating-a-website-with-ai-1/">
   <meta property="og:site_name" content="Patrick Niyongabo">
-  <meta property="og:title" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta property="og:title" content="Using AI to Build AIRTIFACT.NET (Part I)">
   <meta property="og:description" content="Using Claude to Create a WebApp">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-02-23T00:08:49-07:00">
     <meta property="article:modified_time" content="2025-02-23T00:08:49-07:00">
-    <meta property="article:tag" content="Airtifact.com">
+    <meta property="article:tag" content="Airtifact.net">
     <meta property="article:tag" content="Ai">
     <meta property="article:tag" content="Claude">
     <meta property="article:tag" content="Prompting">
     <meta property="article:tag" content="Webapp">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta name="twitter:title" content="Using AI to Build AIRTIFACT.NET (Part I)">
   <meta name="twitter:description" content="Using Claude to Create a WebApp">
 
 
-  <meta itemprop="name" content="Using AI to Build AIRTIFACT.COM (Part I)">
+  <meta itemprop="name" content="Using AI to Build AIRTIFACT.NET (Part I)">
   <meta itemprop="description" content="Using Claude to Create a WebApp">
   <meta itemprop="datePublished" content="2025-02-23T00:08:49-07:00">
   <meta itemprop="dateModified" content="2025-02-23T00:08:49-07:00">
   <meta itemprop="wordCount" content="838">
-  <meta itemprop="keywords" content="Airtifact.com,Ai,Claude,Prompting,Webapp">
+  <meta itemprop="keywords" content="Airtifact.net,Ai,Claude,Prompting,Webapp">
 </head>
 <body>
 <header>
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 </div>
 </div>
 <div class="matter">
-<h1 class="title">Using AI to Build AIRTIFACT.COM (Part I)</h1>
+<h1 class="title">Using AI to Build AIRTIFACT.NET (Part I)</h1>
 <p class="post-meta">
 <span class="post-meta">
 
@@ -104,12 +104,12 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 </div>
 </div>
 <div class="markdown">
-<p>This is the 1st blog post in a series where I will try to use AI tools to build AIRTIFACT.COM from scratch. My main goal is to learn and document how to effectively use LLMs through structured prompting. For brevity, I only included selected snippets of my prompts and AI responses. AIRTIFACT.COM&rsquo;s source code is available on <a href="https://github.com/pniyongabo/airtifact" target="_blank">Github</a>.</p>
+<p>This is the 1st blog post in a series where I will try to use AI tools to build AIRTIFACT.NET from scratch. My main goal is to learn and document how to effectively use LLMs through structured prompting. For brevity, I only included selected snippets of my prompts and AI responses. AIRTIFACT.NET&rsquo;s source code is available on <a href="https://github.com/pniyongabo/airtifact" target="_blank">Github</a>.</p>
 <p>In this post, I will describe how I used Claude to get started with a React web application that curates trending AI artifacts. In the following post, I will focus on adding new features, debugging, and fixing issues.</p>
 <h2 id="initial-project-definition">Initial Project Definition</h2>
 <h3 id="project-overview">Project Overview</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Prompt</span> <span class="c1">#1:</span>
-</span></span><span class="line"><span class="cl"><span class="n">I</span> <span class="n">have</span> <span class="n">a</span> <span class="n">domain</span> <span class="n">name</span> <span class="n">called</span> <span class="n">AIRTIFACT</span><span class="o">.</span><span class="n">COM</span><span class="o">.</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">make</span> <span class="n">a</span> <span class="n">web</span> <span class="n">app</span> <span class="n">that</span> <span class="n">displays</span>
+</span></span><span class="line"><span class="cl"><span class="n">I</span> <span class="n">have</span> <span class="n">a</span> <span class="n">domain</span> <span class="n">name</span> <span class="n">called</span> <span class="n">AIRTIFACT</span><span class="o">.</span><span class="n">NET</span><span class="o">.</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">make</span> <span class="n">a</span> <span class="n">web</span> <span class="n">app</span> <span class="n">that</span> <span class="n">displays</span>
 </span></span><span class="line"><span class="cl"><span class="n">AI</span> <span class="n">Artifacts</span> <span class="n">focusing</span> <span class="n">mostly</span> <span class="n">on</span> <span class="n">AI</span> <span class="n">generated</span> <span class="n">content</span><span class="p">,</span> <span class="n">specifically</span> <span class="n">curating</span> <span class="n">best</span> 
 </span></span><span class="line"><span class="cl"><span class="n">images</span><span class="p">,</span> <span class="n">music</span><span class="p">,</span> <span class="n">videos</span><span class="p">,</span> <span class="n">memes</span><span class="p">,</span> <span class="n">hallucinations</span> <span class="n">generated</span> <span class="n">by</span> <span class="n">LLMs</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">AI</span> <span class="n">tools</span><span class="o">.</span>
 </span></span><span class="line"><span class="cl"><span class="n">The</span> <span class="n">website</span> <span class="n">should</span> <span class="n">also</span> <span class="n">have</span> <span class="n">sections</span> <span class="n">containing</span> <span class="n">trending</span> <span class="n">blogs</span><span class="p">,</span> <span class="n">articles</span><span class="p">,</span> <span class="ow">and</span> <span class="n">topics</span> <span class="ow">in</span> <span class="n">AI</span><span class="o">.</span> 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 </span></span><span class="line"><span class="cl"><span class="o">----------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="o">----------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="n">Response</span> <span class="c1">#1:</span>
-</span></span><span class="line"><span class="cl"><span class="n">I</span><span class="s1">&#39;ll help you plan the development of AIRTIFACT.COM. Let me start by asking </span>
+</span></span><span class="line"><span class="cl"><span class="n">I</span><span class="s1">&#39;ll help you plan the development of AIRTIFACT.NET. Let me start by asking </span>
 </span></span><span class="line"><span class="cl"><span class="n">some</span> <span class="n">key</span> <span class="n">questions</span> <span class="n">to</span> <span class="n">better</span> <span class="n">understand</span> <span class="n">your</span> <span class="n">vision</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="mf">1.</span> <span class="n">User</span> <span class="n">Experience</span> <span class="o">&amp;</span> <span class="n">Features</span><span class="p">:</span>
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 <p>At the end I had a working React/Next.js web application that can displays images and texts.</p>
 <p>After launching the application using the <code>npm run dev</code> command, and opening http://localhost:3000/, I see:</p>
 <p><figure>
-  <img src="./airtifact-homepage-1.png" alt="homepage of airtifact.com after initial setup"  />
+  <img src="./airtifact-homepage-1.png" alt="homepage of airtifact.net after initial setup"  />
 </figure></p>
 <h2 id="notes">Notes</h2>
 <p>I used Claude to generate an early draft of this post by using the following prompts:</p>
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 <div class="termsfloating_right">
 <p>
 <a href="/tags/ai/">ai</a>
-<a href="/tags/airtifact.com/">airtifact.com</a>
+<a href="/tags/airtifact.net/">airtifact.net</a>
 <a href="/tags/claude/">claude</a>
 <a href="/tags/prompting/">prompting</a>
 <a href="/tags/webapp/">webapp</a>

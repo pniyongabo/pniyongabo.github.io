@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2025 | Made Using Vitae Theme for Hugo</copyright>
-		<lastBuildDate>Thu, 27 Feb 2025 00:08:49 -0700</lastBuildDate>
+		<lastBuildDate>Thu, 24 Jul 2025 17:53:49 -0700</lastBuildDate>
 		<atom:link href="https://patrickniyongabo.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Book Review - Ernest Hemingway by Anthony Burgess</title>
+			<link>https://patrickniyongabo.com/posts/book-hemingway-by-burgess/</link>
+			<pubDate>Thu, 24 Jul 2025 17:53:49 -0700</pubDate>
+			<guid>https://patrickniyongabo.com/posts/book-hemingway-by-burgess/</guid>
+			<description>
+			The Self-Invented Legend?
+			</description>
+		</item>
 		<item>
 			<title>Using AI to Build AIRTIFACT.NET (Part II)</title>
 			<link>https://patrickniyongabo.com/posts/creating-a-website-with-ai-2/</link>

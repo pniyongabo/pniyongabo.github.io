@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Reading on Patrick Niyongabo</title>
-		<link>https://patrickniyongabo.com/tags/reading/</link>
-		<description>Recent content in Reading on patrickniyongabo.com</description>
+		<title>2025 on Patrick Niyongabo</title>
+		<link>https://patrickniyongabo.com/tags/2025/</link>
+		<description>Recent content in 2025 on patrickniyongabo.com</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Patrick Niyongabo © 2025 | Made Using Vitae Theme for Hugo</copyright>
 		<lastBuildDate>Thu, 24 Jul 2025 17:53:49 -0700</lastBuildDate>
-		<atom:link href="https://patrickniyongabo.com/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://patrickniyongabo.com/tags/2025/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Book Review - Ernest Hemingway by Anthony Burgess</title>
 			<link>https://patrickniyongabo.com/posts/book-hemingway-by-burgess/</link>
@@ -16,15 +16,6 @@
 			<guid>https://patrickniyongabo.com/posts/book-hemingway-by-burgess/</guid>
 			<description>
 			The Self-Invented Legend?
-			</description>
-		</item>
-		<item>
-			<title>2024 - Wrapped</title>
-			<link>https://patrickniyongabo.com/posts/wrapped-2024/</link>
-			<pubDate>Sat, 04 Jan 2025 17:01:49 -0700</pubDate>
-			<guid>https://patrickniyongabo.com/posts/wrapped-2024/</guid>
-			<description>
-			What I enjoyed in 2024
 			</description>
 		</item>
 	</channel>
